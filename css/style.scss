@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,300;1,400&display=swap");
+
+$site-font: "Josefin Sans", sans-serif;
+
+// WEBSITE COLORS
+$colors: (
+  primary: hsl(0, 36%, 70%),
+);
+
+@function color($mycolor) {
+  @return map-get($map: $colors, $key: $mycolor);
+}
+
+$desktop-size: 768px;
+$phone-size: 390px;
+
+@mixin Desktop {
+  @media (min-width: #{$desktop-size}) {
+    @content;
+  }
+}
+@mixin phone {
+  @media (min-width: #{$phone-size}) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  padding: 25px;
+  @include Desktop {
+    display: none;
+  }
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  @include Desktop {
+    flex-direction: row-reverse;
+  }
+  .col1 {
+    flex: 30vh;
+    background-image: url(/images/hero-mobile.jpg);
+    background-size: cover;
+
+    @include Desktop {
+      background-image: url(/images/hero-desktop.jpg);
+    }
+  }
+  .col2 {
+    flex: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: $site-font;
+    background-image: url(/images/bg-pattern-desktop.svg);
+
+    img {
+      display: none;
+      @include Desktop {
+        display: block;
+      }
+    }
+
+    h1 {
+      font-size: 60px;
+      font-weight: 400;
+      letter-spacing: 9px;
+      @include Desktop {
+        font-size: 100px;
+      }
+      span {
+        color: color(primary);
+      }
+    }
+
+    p {
+      color: color(primary);
+      line-height: 1.8;
+      letter-spacing: 2px;
+      max-width: 450px;
+    }
+    form {
+      position: relative;
+      input {
+        width: 280px;
+        height: 40px;
+        background: none;
+        border: 1px solid color(primary);
+        border-radius: 30px;
+        padding: 0 10px;
+        outline: none;
+        @include phone {
+          width: 400px;
+        }
+      }
+      input::placeholder {
+        color: color(primary);
+      }
+      button {
+        width: 50px;
+        height: 40px;
+        position: absolute;
+        right: 0%;
+        border-radius: 20px;
+        background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+        border: none;
+        cursor: pointer;
+        box-shadow: 3px 7px 19px 1px rgb(0 0 0 / 50%);
+      }
+      button::after {
+        content: url(/images/icon-arrow.svg);
+        position: absolute;
+        top: 25%;
+        left: 45%;
+      }
+    }
+  }
+}

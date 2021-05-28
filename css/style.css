@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,300;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  padding: 25px;
+}
+
+@media (min-width: 768px) {
+  header {
+    display: none;
+  }
+}
+
+.container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+.container .col1 {
+  -webkit-box-flex: 30vh;
+      -ms-flex: 30vh;
+          flex: 30vh;
+  background-image: url(/images/hero-mobile.jpg);
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .container .col1 {
+    background-image: url(/images/hero-desktop.jpg);
+  }
+}
+
+.container .col2 {
+  -webkit-box-flex: 70vh;
+      -ms-flex: 70vh;
+          flex: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: "Josefin Sans", sans-serif;
+  background-image: url(/images/bg-pattern-desktop.svg);
+}
+
+.container .col2 img {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .container .col2 img {
+    display: block;
+  }
+}
+
+.container .col2 h1 {
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 9px;
+}
+
+@media (min-width: 768px) {
+  .container .col2 h1 {
+    font-size: 100px;
+  }
+}
+
+.container .col2 h1 span {
+  color: #ce9797;
+}
+
+.container .col2 p {
+  color: #ce9797;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  max-width: 450px;
+}
+
+.container .col2 form {
+  position: relative;
+}
+
+.container .col2 form input {
+  width: 280px;
+  height: 40px;
+  background: none;
+  border: 1px solid #ce9797;
+  border-radius: 30px;
+  padding: 0 10px;
+  outline: none;
+}
+
+@media (min-width: 390px) {
+  .container .col2 form input {
+    width: 400px;
+  }
+}
+
+.container .col2 form input::-webkit-input-placeholder {
+  color: #ce9797;
+}
+
+.container .col2 form input:-ms-input-placeholder {
+  color: #ce9797;
+}
+
+.container .col2 form input::-ms-input-placeholder {
+  color: #ce9797;
+}
+
+.container .col2 form input::placeholder {
+  color: #ce9797;
+}
+
+.container .col2 form button {
+  width: 50px;
+  height: 40px;
+  position: absolute;
+  right: 0%;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  border: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.container .col2 form button::after {
+  content: url(/images/icon-arrow.svg);
+  position: absolute;
+  top: 25%;
+  left: 45%;
+}
+/*# sourceMappingURL=style.css.map */
