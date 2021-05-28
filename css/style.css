@@ -40,13 +40,13 @@ header {
   -webkit-box-flex: 30vh;
       -ms-flex: 30vh;
           flex: 30vh;
-  background-image: url(/images/hero-mobile.jpg);
+  background-image: url(https://www.linkpicture.com/q/hero-mobile.jpg);
   background-size: cover;
 }
 
 @media (min-width: 768px) {
   .container .col1 {
-    background-image: url(/images/hero-desktop.jpg);
+    background-image: url(https://www.linkpicture.com/q/hero-desktop.jpg);
   }
 }
 
@@ -67,7 +67,7 @@ header {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   font-family: "Josefin Sans", sans-serif;
-  background-image: url(/images/bg-pattern-desktop.svg);
+  background-image: url(https://www.linkpicture.com/q/bg-pattern-desktop_1.svg);
 }
 
 .container .col2 img {
@@ -148,12 +148,12 @@ header {
   background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   border: none;
   cursor: pointer;
-  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 3px 7px 19px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 7px 19px 1px rgba(0, 0, 0, 0.5);
 }
 
 .container .col2 form button::after {
-  content: url(/images/icon-arrow.svg);
+  content: url(https://www.linkpicture.com/q/icon-arrow.svg);
   position: absolute;
   top: 25%;
   left: 45%;
