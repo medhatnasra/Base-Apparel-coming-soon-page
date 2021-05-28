@@ -47,11 +47,11 @@ header {
   }
   .col1 {
     flex: 30vh;
-    background-image: url("/images/hero-mobile.jpg");
+    background-image: url("./images/hero-mobile.jpg");
     background-size: cover;
 
     @include Desktop {
-      background-image: url("/images/hero-desktop.jpg");
+      background-image: url("./images/hero-desktop.jpg");
     }
   }
   .col2 {
@@ -61,7 +61,7 @@ header {
     align-items: center;
     justify-content: space-around;
     font-family: $site-font;
-    background-image: url("/images/bg-pattern-desktop.svg");
+    background-image: url("./images/bg-pattern-desktop.svg");
 
     img {
       display: none;
@@ -117,7 +117,7 @@ header {
         box-shadow: 3px 7px 19px 1px rgb(0 0 0 / 50%);
       }
       button::after {
-        content: url("/images/icon-arrow.svg");
+        content: url("./images/icon-arrow.svg");
         position: absolute;
         top: 25%;
         left: 45%;
